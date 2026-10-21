@@ -1,0 +1,19 @@
+name: Compiler et tester Tower Defense
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  linux-sanitizers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Installer SDL2
+        run: sudo apt-get update && sudo apt-get install -y libsdl2-dev
+      - name: Compiler avec controles memoire
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_FLAGS="-fsanitize=address,undefined -fno-omit-frame-pointer" && cmake --build build --parallel 2
+      - name: Tester logique, sauvegardes et affichage SDL
+        run: ctest --test-dir build --output-on-failure -V

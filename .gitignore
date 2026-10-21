@@ -1,0 +1,15 @@
+/build*/
+/bin/
+/obj/
+.idea/
+.vscode/
+*.exe
+*.dll
+*.o
+*.obj
+*.a
+*.tdb
+*.tds
+*.depend
+*.layout
+.DS_Store
