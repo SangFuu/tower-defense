@@ -4,11 +4,11 @@ I created this C project with SAID PAUL. It is a Tower Defense simulation using 
 
 Defenses are placed automatically and enemies follow a path towards the king's tower. You can watch the game, pause it, save, load or restart it.
 
-![Game preview](docs/apercu.png)
+![Gameplay](docs/gameplay.gif)
 
 ## Play on Windows
 
-Extract the Windows version and open `tower-defense.exe`. Keep the `data` folder and `SDL2.dll` next to the executable.
+Download `tower-defense-windows-x64.zip` from the [Releases](https://github.com/SangFuu/tower-defense/releases) page, extract it and open `tower-defense.exe`. Keep the `data` folder and `SDL2.dll` next to the executable.
 
 | Key | Action |
 |---|---|
